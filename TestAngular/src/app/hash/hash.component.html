@@ -1,0 +1,30 @@
+<div class="card"
+     style="height: 400px;">
+    <div class="card-header">
+        {{pageTitle}}
+    </div>
+    <div class="card-body">
+        <div class="container-fluid">
+            <div class="text-center">
+                <label for="firstName" style="margin: 5px;">Enter your First Name</label>
+                <input class="form-control"
+                       style="width: 40%;margin: auto;text-align: center;"
+                       type="text"
+                       id="firstName"
+                       [(ngModel)]="firstName"
+                       placeholder="Your first name (required)" />
+                <button class="btn btn-outline-warning"
+                        style="width:150px; margin:20px"
+                        type="button"
+                        title="Get the Hash"
+                        (click)="generateHash()">
+                    Get Hash
+                </button>
+                <br />
+                <span *ngIf="hash" style="color: #337AB7;">Hash:
+                    <h3 [title]="'Please Copy this Hash'">{{hash}}</h3>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
